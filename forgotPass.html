@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>SchoolMate</title>
+    <!--Sweet Alert-->
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+    <script type="text/javascript" src="loginpage.js"></script>
+    <link rel='stylesheet' href='loginpage.css'>
+</head>
+
+<body>
+    <div class="back">
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form" name="forgotform">
+                    <input type="text" placeholder="Admin username" id="adminUsername" />
+                    <input type="password" placeholder="Admin password" name="adminPassword" />
+                    <input type="text" placeholder="Staff username" id="loginusername" />
+                    <input type="password" placeholder="password" name="loginpassword" />
+                    <input type="password" placeholder="Confirm password" name="loginConfirm" />
+                    <button type="button" onClick="forgot()">Confirm</button><br>
+                    <button type="button" onClick="window.open('loginPage.html','_self');">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

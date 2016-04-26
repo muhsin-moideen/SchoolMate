@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>myApp</title>
+     <script type="text/javascript" src="adminForm.js"></script>
+    <link rel='stylesheet' href='adminForm.css'>
+  </head>
+  <body>
+    <div class="back">
+      <div>
+        <input type="text" placeholder="enter id" name="searchId"/>
+        <input type="radio" group="1" value="staff" name="radio1">Staff</input>
+        <input type="radio" group="1" value="student" checked="checked" name="radio1">Student</input>
+        <button type="button" onClick="search(radio1.value)">Search</button>
+      </div>
+    </div>
+  </body>
+</html>

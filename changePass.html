@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>SchoolMate</title>
+        <!--Sweet Alert-->
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+     <script type="text/javascript" src="loginpage.js"></script>
+    <link rel='stylesheet' href='loginpage.css'>
+  </head>
+  <body>
+    <div class="back">
+      <div class="login-page">
+        <div class="form">
+          <form class="login-form" name="changeform">
+            <input type="text" placeholder="username" name="loginusername"/>
+            <input type="password" placeholder="Old password" name="loginpassword"/>
+            <input type="password" placeholder="New password" name="Npassword1"/>
+            <input type="password" placeholder="Confirm New password" name="Npassword2"/>
+            <button type="button" onClick="updatePass()">Change</button>
+            <button type="button" onClick="window.open('loginPage.html','_self');">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

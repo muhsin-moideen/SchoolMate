@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SchoolMate</title>
+    <!--Sweet Alert-->
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
+    <link href="table.css" rel="stylesheet">
+    <link href="nmp.css" rel="stylesheet">
+    <link href="adminHome.css" rel="stylesheet">
+    <link href="flatnav.css" rel="stylesheet">
+    <link href="administration.css" rel="stylesheet">
+    <link href="marks.css" rel="stylesheet">
+    <script src="marks.js" type="text/javascript"></script>
+    <!--input field-->
+    <link rel="stylesheet" type="text/css" href="css/set2.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+    <script src="prefixfree-1.0.7.js" type="text/javascript"></script>
+    <!--sidebar-->
+    <link rel="stylesheet" type="text/css" href="component.css" />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+
+</head>
+
+<body onload="loadfunc()">
+    <div id="st-container" class="st-container">
+
+        <nav class="st-menu st-effect-9" id="menu-9">
+            <h2 class="icon icon-lab">STUDENT PERFORMANCE</h2>
+            <ul>
+                <li><a class="icon icon-data" href="Home.html" Style="font-size: 16px;">Dashboard</a></li>
+                <li><a class="icon icon-location" href="nmp_Teacher.html" Style="font-size: 16px;">Noon Meal Programme</a></li>
+                <li><a class="icon icon-wallet" href="tax_teacher.html" Style="font-size: 16px;">Salary Calculation</a></li>
+
+
+            </ul>
+        </nav>
+
+        <!-- main content -->
+        <div class="st-pusher" style="background-image:url(./book.jpg);">
+
+            <nav class="topbar">
+                <ul class="nav">
+                    <li id="options" class="right">
+                        <a id="userName">Logout</a>
+                        <ul class="subnav">
+                            <li><a href="loginpage.html">Logout</a></li>
+                            <li><a href="#">Change Password</a></li>
+                        </ul>
+                    </li>
+                    <li align="left" class="left" id="bla">
+                        <button data-effect="st-effect-9" class="navDrawer"></button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mainContent">
+                <nav class="topbar">
+                    <ul class="newnewnav nav">
+                        <li id="addMenu"><a href="#">Add Marks</a>
+                            <ul class="subnav">
+                                <li>
+                                    <button type="button" id="AMonthly" onclick="menu(this.id)">Monthly Test</button>
+                                </li>
+                                <li>
+                                    <button type="button" id="ATerm" onclick="menu(this.id)">Term Exam</button>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li id="viewMenu"><a href="#">View Marks</a>
+                            <ul class="subnav">
+                                <li>
+                                    <button type="button" id="VMonthly" onclick="menu(this.id)">View All Students</button>
+                                </li>
+                                <li>
+                                    <button type="button" id="VTerm" onclick="menu(this.id)">View One Student</button>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!--Each content here-->
+                <div class="addMon" id="addMon">
+
+                    <form class="formClass" id="fmonthly" name="fmonthly">
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="student_id" />
+					<label class="input__label input__label--chisato" for="student_id">
+				<span class="input__label-content input__label-content--chisato" data-content="student_id">student_id</span>
+                        </label>
+                        </span>
+                        <select id="term">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select><br>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="testno" />
+					<label class="input__label input__label--chisato" for="testno">
+				<span class="input__label-content input__label-content--chisato" data-content="Test_no">Test_no</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="eng" />
+					<label class="input__label input__label--chisato" for="eng">
+				<span class="input__label-content input__label-content--chisato" data-content="English">English</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="hin" />
+					<label class="input__label input__label--chisato" for="hin">
+				<span class="input__label-content input__label-content--chisato" data-content="Hindi">Hindi</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="lang" />
+					<label class="input__label input__label--chisato" for="lang">
+				<span class="input__label-content input__label-content--chisato" data-content="Kannada/malayalam">Kannada/malayalam</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="evs" />
+					<label class="input__label input__label--chisato" for="evs">
+				<span class="input__label-content input__label-content--chisato" data-content="EVS">EVS</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="math" />
+					<label class="input__label input__label--chisato" for="math">
+				<span class="input__label-content input__label-content--chisato" data-content="Mathematics">Mathematics</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="it" />
+					<label class="input__label input__label--chisato" for="it">
+				<span class="input__label-content input__label-content--chisato" data-content="IT">IT</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="ar" />
+					<label class="input__label input__label--chisato" for="ar">
+				<span class="input__label-content input__label-content--chisato" data-content="Arabic">Arabic</span>
+                        </label>
+                        </span>
+                        <br>
+                        <button type="button" id="monthlyMarks" onclick="addMarks(this.id)">Add Marks</button>
+                    </form>
+                </div>
+                <div class="addTrm" id="addTrm">
+                    <center>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="Tstudent_id" />
+					<label class="input__label input__label--chisato" for="student_id">
+				<span class="input__label-content input__label-content--chisato" data-content="student_id">student_id</span>
+                        </label>
+                        </span>
+                        <br>
+                        <select id="Tterm">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                    </center>
+
+                    <form id="fterm" name="fterm" class="formClass">
+
+                        <h3 id="sub" value="Subject">dcvsjdf</h3>
+                        <br>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="process" />
+					<label class="input__label input__label--chisato" for="process">
+				<span class="input__label-content input__label-content--chisato" data-content="Process">Process</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="portfolio" />
+					<label class="input__label input__label--chisato" for="portfolio">
+				<span class="input__label-content input__label-content--chisato" data-content="Portfolio">Portfolio</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="ua" />
+					<label class="input__label input__label--chisato" for="ua">
+				<span class="input__label-content input__label-content--chisato" data-content="UA">UA</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="ce" />
+					<label class="input__label input__label--chisato" for="ce">
+				<span class="input__label-content input__label-content--chisato" data-content="CE">CE</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="te" />
+					<label class="input__label input__label--chisato" for="te">
+				<span class="input__label-content input__label-content--chisato" data-content="TE">TE</span>
+                        </label>
+                        </span>
+
+                        <br>
+                        <button type="button" id="termMarks" onclick="addMarks(this.id)">Add Marks</button>
+
+                    </form>
+
+                </div>
+                <div class="viewAll" id="viewAll">
+                    <form id="allDivF" name="allDivF" class="formClass">
+                        <select id="termView">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                        <br>
+                        <button type="button" onclick="showAll()">Show All Students</button>
+
+                    </form>
+                    <center>
+                        <table id="allTable_Mon"></table>
+                        <table id="allTable_Term"></table>
+                    </center>
+                    
+                </div>
+                <div class="viewOne" id="viewOne">
+
+                    <form id="oneDivF" name="oneDivF" class="formClass">
+                        <select id="termOne">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                        <br>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="student_idM" />
+					<label class="input__label input__label--chisato" for="student_idM">
+				<span class="input__label-content input__label-content--chisato" data-content="student_id">student_id</span>
+                        </label>
+                        </span>
+                        <br>
+                        <button type="button" onclick="showOne()">Show Student Details</button>
+
+                    </form>
+                    <center>
+                        <table id="oneTable_Mon"></table>
+                        <table id="oneTable_Term"></table>
+                    </center>
+                    
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+        <!-- /main content -->
+    </div>
+    <!-- /st-container -->
+
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script>
+    <script>
+        (function() {
+            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+            if (!String.prototype.trim) {
+                (function() {
+                    // Make sure we trim BOM and NBSP
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function() {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function(inputEl) {
+                // in case the input is already filled..
+                if (inputEl.value.trim() !== '') {
+                    classie.add(inputEl.parentNode, 'input--filled');
+                }
+
+                // events:
+                inputEl.addEventListener('focus', onInputFocus);
+                inputEl.addEventListener('blur', onInputBlur);
+            });
+
+            function onInputFocus(ev) {
+                classie.add(ev.target.parentNode, 'input--filled');
+            }
+
+            function onInputBlur(ev) {
+                if (ev.target.value.trim() === '') {
+                    classie.remove(ev.target.parentNode, 'input--filled');
+                }
+            }
+        })();
+
+    </script>
+
+</body>
+
+</html>

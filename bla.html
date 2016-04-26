@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SchoolMate</title>
+    <script src="bla.js"></script>
+</head>
+
+<body>
+    <form id="monForm">
+        <table>
+            <tr>
+                <td>Select class</td>
+                <td>
+                    <select id="sclass">
+                        <option value="1">I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                    </select>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>Select section</td>
+                <td>
+                    <select id="ssec">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Term</td>
+                <td>
+                    <select id="sterm">
+                        <option value="A">I</option>
+                        <option value="B">II</option>
+                        <option value="C">III</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Test number</td>
+                <td>
+                    <input type="number" name="testno" id="testno" />
+                </td>
+            </tr>
+            <tr>
+                <td>Select subject</td>
+                <td>
+                    <select id="ssub">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="LANGUAGE">LANGUAGE</option>
+                        <option value="EVS">EVS</option>
+                        <option value="MATHS">MATHS</option>
+                        <option value="IT">IT</option>
+                        <option value="Arabic">Arabic</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="button" onclick="enterMonthly()">Enter marks</button>
+    </form>
+
+    <div>
+        <form id="monthlyForm">
+            <table id="monthlyTable"></table>
+            <button type="button" onclick="addmonthly()">ADD Marks</button>;
+        </form>
+    </div>
+    
+    
+    <div>
+        <form id="tForm">
+        <table>
+            <tr>
+                <td>Select class</td>
+                <td>
+                    <select id="tclass">
+                        <option value="1">I</option>
+                        <option value="2">II</option>
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                    </select>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td>Select section</td>
+                <td>
+                    <select id="tsec">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Term</td>
+                <td>
+                    <select id="tterm">
+                        <option value="A">I</option>
+                        <option value="B">II</option>
+                        <option value="C">III</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select subject</td>
+                <td>
+                    <select id="tsub">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="LANGUAGE">LANGUAGE</option>
+                        <option value="EVS">EVS</option>
+                        <option value="MATHS">MATHS</option>
+                        <option value="IT">IT</option>
+                        <option value="Arabic">Arabic</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="button" onclick="enterTerm()">Enter marks</button>
+    </form>
+    </div>
+    <div>
+        <form id="termForm">
+            <table id="termTable"></table>
+            <button type="button" onclick="addterm()">ADD Marks</button>;
+        </form>
+    </div>
+</body>
+</html>

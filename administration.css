@@ -1,0 +1,102 @@
+.studentDetails{
+  display: none;
+}
+.staffDetails{
+  display: none;
+}
+.userDetails{
+    display: none;
+}
+
+.updateStudent{
+  display: none;
+}
+.viewStudent{
+  display: none;
+}
+.deleteStudent{
+  display: none;
+}
+.updateStaff{
+  display: none;
+}
+.viewStaff{
+  display: none;
+}
+.deleteStaff{
+  display: none;
+
+}
+.mainContent{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.48);
+    height:auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 0px;
+    margin-top: 50px;
+}
+.studentInfo{
+    display: none;
+    text-align: center;
+    border-color: white;
+    width="60%";
+    border-width: thick;
+    border: white;
+    border-style: solid;
+    height: auto;
+    margin-left: 20%;
+    padding:  20px 20px 20px 20px;
+    margin-right: 20%;
+    margin-bottom: 5%;
+}
+#viewAll{
+    display: none;
+}
+#viewOne{
+    display: none;
+}
+
+#SviewAll{
+    display: none;
+}
+#SviewOne{
+    display: none;
+}
+#staffInfo{
+    display: none;
+}
+#editStaf{
+    display: none;
+
+}
+#userInfo{
+    display: none;
+}
+#UviewAll{
+    display: none;
+}
+#UviewOne{
+    display: none;
+}
+.formClass{
+    text-align: center;
+    border-color: white;
+    width="60%";
+    border-width: thick;
+    border: white;
+    border-style: solid;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 10%;
+    padding:  20px 20px 20px 20px;
+    margin-right: 20%;
+    margin-bottom: 5%;
+}
+#editStudent{
+    display: none;
+}
+#editStaf{
+    display: none;
+}

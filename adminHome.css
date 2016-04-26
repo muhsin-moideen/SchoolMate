@@ -1,0 +1,64 @@
+.mainContent{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.48);
+    height:auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 50px;
+    margin-top: 50px;
+
+}
+.column {
+	float: left;
+	width: 100%;
+    height:auto;
+	padding: 0 2em;
+	min-height: 100px;
+	position: relative;
+}
+
+
+.column:nth-child(2) {
+	box-shadow: -1px 0 0 rgba(0,0,0,0.1);
+}
+
+.column p {
+	font-weight: 300;
+	font-size: 2em;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+	line-height: 1.5;
+}
+.studComplete{
+    display: block;
+    margin-top: 100px;
+}
+
+.columnV{
+    float: left;
+	width: 50%;
+    height:auto;
+	padding: 0 2em;
+	min-width: 200px;
+	position: relative;
+    color: white;
+    border-color: transparent;
+}
+.colrR{
+    background: #1976D2;
+    margin-left: auto;
+    margin-right: auto;
+    width=50px;
+    display=block;
+    border-radius: 4px;
+}
+.colrU{
+    background: #C62828;
+    margin-left: auto;
+    margin-right: auto;
+    width=50px;
+    display=block;
+    border-radius: 4px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>SchoolMate</title>
+		<link href="adminHome.css" rel="stylesheet">
+		<link href="flatnav.css" rel="stylesheet">
+        <link href="table.css" rel="stylesheet">
+		<script type="text/javascript" src="Chart.js"></script>
+    <script type="text/javascript" src="adminHome.js"></script>
+		<script src="prefixfree-1.0.7.js" type="text/javascript"></script>
+		<!--sidebar-->
+		<link rel="stylesheet" type="text/css" href="component.css" />
+		<link rel="stylesheet" type="text/css" href="demo.css" />
+		<script src="js/modernizr.custom.js"></script>
+  </head>
+
+  <body onload="loadFunc()">
+		<div id="st-container" class="st-container">
+
+			<nav class="st-menu st-effect-9" id="menu-9">
+				<h2 class="icon icon-lab">DASHBOARD</h2>
+				<ul>
+					<li><a class="icon icon-location" href="marks_teacher.html">Student Performance</a></li>
+					<li><a class="icon icon-wallet" href="nmp_Teacher.html">Noon Meal Programme</a></li>
+                    <li><a class="icon icon-wallet" href="tax_teacher.html">Salary Calculation</a></li>
+				</ul>
+			</nav>
+
+			<!-- main content -->
+			<div class="st-pusher" style="background-image:url(./book.jpg)">
+
+			<nav class="topbar">
+				<ul class="nav">
+					<li id="options" class="right">
+						<a  id="userName">Logout</a>
+						<ul class="subnav">
+							<li><a href="loginpage.html">Logout</a></li>
+							<li><a href="changePass.html">Change Password</a></li>
+						</ul>
+					</li>
+					<li align="left" class="left" id="bla">
+			<button data-effect="st-effect-9"class="navDrawer"></button>
+					</li>
+				</ul>
+			</nav>
+<div class="mainContent" >
+			<div class="column" id="column1">
+				<form action="" method="get" class="searchBar">
+					<input type="text" name="search_text" id="search_text" placeholder="Student details"/>
+					<button type="button" name="search_button" id="search_button" onclick="studInfo()">
+                    <button type="button" name="reset_button" id="reset_button" onclick="resetSt()"></button>
+                    </button>
+				</form >
+				<!-- student shit -->
+				<div id="studComplete" name="studComplete" class="studComplete">
+                    <center>
+                        <table id="sComplete" class=flatTable></table>
+                        <table id="sMonthly" class=flatTable></table>
+                        <table id="sMarks" class="flatTable"></table>
+                    </center>
+					
+
+				</div>
+			</div>
+			<div class="column" id="column2">
+
+                
+				<canvas id="canvasPerformance" height="300" width="400"></canvas>
+                    <label class="colrR" >Student Performance Average</label>
+
+				
+			<!-- charts shit -->
+			</div>
+</div>
+	</div><!-- /main content -->
+</div><!-- /st-container -->
+<script>
+
+
+</script>
+<script src="js/classie.js"></script>
+<script src="js/sidebarEffects.js"></script>
+  </body>
+</html>

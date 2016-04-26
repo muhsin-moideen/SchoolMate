@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SchoolMate</title>
+    <!--Sweet Alert-->
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
+    <link href="table.css" rel="stylesheet">
+    <link href="adminHome.css" rel="stylesheet">
+    <link href="flatnav.css" rel="stylesheet">
+    <link href="table.css" rel="stylesheet">
+    <link href="administration.css" rel="stylesheet">
+    <script src="administration.js" type="text/javascript"></script>
+    <!--input field-->
+    <link rel="stylesheet" type="text/css" href="css/set2.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+    <script src="prefixfree-1.0.7.js" type="text/javascript"></script>
+    <!--sidebar-->
+    <link rel="stylesheet" type="text/css" href="component.css" />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body onload="loadfunc()">
+    <div id="st-container" class="st-container">
+
+        <nav class="st-menu st-effect-9" id="menu-9">
+            <h2 class="icon icon-lab">Administration</h2>
+            <ul >
+                <li><a class="icon icon-data" href="adminHome.html" Style="font-size: 16px;">Dashboard</a></li>
+                <li><a class="icon icon-location" href="marks.html" Style="font-size: 16px;">Student Performance</a></li>
+                <li><a class="icon icon-wallet" href="nmp.html" Style="font-size: 16px;">Noon Meal Programme</a></li>
+                <li><a class="icon icon-wallet" href="tax.html" Style="font-size: 16px;">Calculate Salary</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- main content -->
+        <div class="st-pusher" style="background-image:url(./book.jpg)">
+
+            <nav class="topbar">
+                <ul class="nav">
+                    <li id="options" class="right">
+                        <a id="userName">Logout</a>
+                        <ul class="subnav">
+                            <li><a href="loginpage.html">Logout</a></li>
+                            <li><a href="#">Change Password</a></li>
+                        </ul>
+                    </li>
+                    <li align="left" class="left" id="bla">
+                        <button data-effect="st-effect-9" class="navDrawer"></button>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mainContent">
+                <nav class="topbar">
+                    <ul class="newnav nav">
+                        <li id="studentMenu"><a href="#">Student</a>
+                            <ul class="subnav">
+                                <li>
+                                    <button type="button" id="addSt" onclick="Smenu(this.id)">Add Student</button>
+                                </li>
+                                <li>
+                                    <button type="button" id="viewAllStudent" onclick="Smenu(this.id)">View All Students</button>
+                                </li>
+                                <li>
+                                    <button type="button" id="viewStudent" onclick="Smenu(this.id)">View Student</button>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li id="staffMenu"><a href="#">Staff</a>
+                            <ul class="subnav">
+                                <li>
+                                    <button type="button" id="addStaff" onclick="Stmenu(this.id)">Add Staff</button>
+                                </li>
+                                <li>
+                                    <button type="button" id="viewAllStaff" onclick="Stmenu(this.id)">View All Staff</button>
+                                </li>
+                                <li>
+                                    <button type="button" id="viewStaff" onclick="Stmenu(this.id)">View Staff</button>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li id="userMenu"><a href="#">User</a>
+                            <ul class="subnav">
+                                <li>
+                                    <button type="button" id="addUser" onclick="Umenu(this.id)">Add User</button>
+                                </li>
+                                <li>
+                                    <button type="button" id="viewAllUser" onclick="Umenu(this.id)">View All User </button>
+                                </li>
+                                <li>
+                                    <button type="button" id="viewUser" onclick="Umenu(this.id)">Revoke User</button>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!--Each content here-->
+                <div id="studentDetails" name="student" class="studentDetails">
+                    <form id="studentInfo" name="studentInfo" class="studentInfo" style="margin-top:50px;">
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="studentName" />
+					<label class="input__label input__label--chisato" for="studentName">
+				<span class="input__label-content input__label-content--chisato" data-content="Full Name">Full Name</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="classId" />
+					<label class="input__label input__label--chisato" for="classId">
+				<span class="input__label-content input__label-content--chisato" data-content="Class ID">Class ID</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="mName" />
+					<label class="input__label input__label--chisato" for="mName">
+				<span class="input__label-content input__label-content--chisato" data-content="Mothers Name">Mothers Name</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="fName" />
+					<label class="input__label input__label--chisato" for="fName">
+				<span class="input__label-content input__label-content--chisato" data-content="Fathers Name">Fathers Name</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="address" />
+					<label class="input__label input__label--chisato" for="address">
+				<span class="input__label-content input__label-content--chisato" data-content="Address">Address</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="religion" />
+					<label class="input__label input__label--chisato" for="religion">
+				<span class="input__label-content input__label-content--chisato" data-content="Religion">Religion</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="contactNo" />
+					<label class="input__label input__label--chisato" for="contactNo">
+				<span class="input__label-content input__label-content--chisato" data-content="Contact No">Contact No</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="dob" />
+					<label class="input__label input__label--chisato" for="dob">
+				<span class="input__label-content input__label-content--chisato" data-content="DOB">DOB</span>
+                        </label>
+                        </span>
+                        <br>
+                        <button type="button" onclick="addStudent()" id="addst">Add</button>
+                        <button type="button" onclick="updateStudent(2)" id="editStudent">Update</button>
+                    </form>
+                    <div id="viewAll">
+                        <center>
+                            <table id="studentTable"></table>
+                        </center>
+                        
+                    </div>
+                    <div id="viewOne">
+                        <form class="formClass" name="oneform" style="margin-top:50px;">
+                            <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="ustudentId" />
+					<label class="input__label input__label--chisato" for="dob">
+				<span class="input__label-content input__label-content--chisato" data-content="Student ID">Student ID</span>
+                            </label>
+                            </span>
+                            <br>
+                            <button type="button" onclick="updateStudent(1)">View</button>
+                            <button type="button" onclick="delStudent()">Delete</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div id="staffDetails" name="staff">
+                    <form id="staffInfo" name="staffInfo" class="formClass" style="margin-top:50px;">
+
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="staffName" />
+					<label class="input__label input__label--chisato" for="staffName">
+				<span class="input__label-content input__label-content--chisato" data-content="Full Name">Full Name</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="addres" />
+					<label class="input__label input__label--chisato" for="addres">
+				<span class="input__label-content input__label-content--chisato" data-content="Address">Address</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="contactN" />
+					<label class="input__label input__label--chisato" for="contactN">
+				<span class="input__label-content input__label-content--chisato" data-content="Contact Number">Contact Number</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="hra" />
+					<label class="input__label input__label--chisato" for="hra">
+				<span class="input__label-content input__label-content--chisato" data-content="HRA">HRA</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="basicPay" />
+					<label class="input__label input__label--chisato" for="basicPay">
+				<span class="input__label-content input__label-content--chisato" data-content="Basic Pay">Basic Pay</span>
+                        </label>
+                        </span>
+                        
+                        <br>
+                        <button type="button" onclick="addStaff()" id="addstaf">Add</button>
+                        <button type="button" onclick="updateStaff(2)" id="editStaf">Update</button>
+
+                    </form>
+                    <div id="SviewAll">
+                        <center>
+                            <table id="staffTable"></table>
+                        </center>
+                        
+                    </div>
+                    <div id="SviewOne">
+                        <form class="formClass" name="Soneform" style="margin-top:50px;">
+                            <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="ustaffId" />
+					<label class="input__label input__label--chisato" for="dob">
+				<span class="input__label-content input__label-content--chisato" data-content="Staff ID">Staff ID</span>
+                            </label>
+                            </span>
+                            <br>
+                            <button type="button" onclick="updateStaff(1)">View</button>
+                            <button type="button" onclick="delStaff()">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                
+                
+                <div id="userDetails" name="user">
+                    
+                    <form id="userInfo" name="userInfo" class="formClass" style="margin-top:50px;">
+
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="STAFF_ID" />
+					<label class="input__label input__label--chisato" for="STAFF_ID">
+				<span class="input__label-content input__label-content--chisato" data-content="STAFF ID">STAFF ID</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="UNAME" />
+					<label class="input__label input__label--chisato" for="UNAME">
+				<span class="input__label-content input__label-content--chisato" data-content="User Name">User Name</span>
+                        </label>
+                        </span>
+                        <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="ACCESS" />
+					<label class="input__label input__label--chisato" for="ACCESS">
+				<span class="input__label-content input__label-content--chisato" data-content="Access">Access</span>
+                        </label>
+                        </span>
+                        
+                        
+                        <br>
+                        <button type="button" onclick="addUser()" id="adduser">Add</button>
+                    </form>
+                    <div id="UviewAll">
+                        <center>
+                            <table id="userTable"></table>
+                        </center>
+                        
+                    </div>
+                    <div id="UviewOne">
+                        <form class="formClass" name="Uoneform" style="margin-top:50px;">
+                            <span class="input input--chisato">
+					<input class="input__field input__field--chisato" type="text" id="uuserId" />
+					<label class="input__label input__label--chisato" for="uuserId">
+				<span class="input__label-content input__label-content--chisato" data-content="Staff ID">Staff ID</span>
+                            </label>
+                            </span>
+                            <br>
+                            <button type="button" onclick="delUser()">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /main content -->
+    </div>
+    <!-- /st-container -->
+    <script>
+
+
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/sidebarEffects.js"></script>
+    <script>
+        (function() {
+            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+            if (!String.prototype.trim) {
+                (function() {
+                    // Make sure we trim BOM and NBSP
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function() {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function(inputEl) {
+                // in case the input is already filled..
+                if (inputEl.value.trim() !== '') {
+                    classie.add(inputEl.parentNode, 'input--filled');
+                }
+
+                // events:
+                inputEl.addEventListener('focus', onInputFocus);
+                inputEl.addEventListener('blur', onInputBlur);
+            });
+
+            function onInputFocus(ev) {
+                classie.add(ev.target.parentNode, 'input--filled');
+            }
+
+            function onInputBlur(ev) {
+                if (ev.target.value.trim() === '') {
+                    classie.remove(ev.target.parentNode, 'input--filled');
+                }
+            }
+        })();
+
+        
+    </script>
+</body>
+
+</html>

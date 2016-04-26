@@ -1,0 +1,72 @@
+
+
+body {
+	background: rgba(68, 68, 68, 0.37);
+	color: #48a770;
+	font-weight: 300;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+	outline: none;
+}
+
+a:hover, a:focus {
+	color: #2c774b;
+	outline: none;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+
+.main {
+	max-width: 69em;
+	margin: 0 auto;
+}
+
+
+
+button {
+	border: none;
+	padding: 0.6em 1.2em;
+	background: black;
+	color: #fff;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	margin: 3px 2px;
+	border-radius: 2px;
+}
+
+button:hover {
+	background-color: #2c774b;
+}
+
+.info {
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 3em;
+	clear: both;
+	padding: 3em 0;
+	opacity: 0.7;
+	color: #aca89a;
+}
+
+.info a {
+	font-weight: 700;
+	font-size: 0.9em;
+}
